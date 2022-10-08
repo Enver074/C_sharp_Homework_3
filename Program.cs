@@ -59,23 +59,44 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
-Console.Write("Введите координаты x1: ");
-double x1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите координаты x1: ");
+// double x1 = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("Введите координаты y1: ");
-double y1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите координаты y1: ");
+// double y1 = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("Введите координаты z1: ");
-double z1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите координаты z1: ");
+// double z1 = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("Введите координаты x2: ");
-double x2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите координаты x2: ");
+// double x2 = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("Введите координаты y2: ");
-double y2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите координаты y2: ");
+// double y2 = Convert.ToDouble(Console.ReadLine());
 
-Console.Write("Введите координаты z2: ");
-double z2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите координаты z2: ");
+// double z2 = Convert.ToDouble(Console.ReadLine());
 
-double len = Math.Sqrt((Math.Pow(x1-x2, 2))+(Math.Pow(y1-y2, 2))+(Math.Pow(z1-z2, 2)));
-Console.WriteLine($"Расстояние между точками {len:f2}");
+// double len = Math.Sqrt((Math.Pow(x1-x2, 2))+(Math.Pow(y1-y2, 2))+(Math.Pow(z1-z2, 2)));
+// Console.WriteLine($"Расстояние между точками {len:f2}");
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+Console.WriteLine("Введите число");
+int num = int.Parse(Console.ReadLine()!);
+int i = 1;
+int result = 0;
+int result1 = 0;
+while(i<=num-1)
+
+{
+    result = Convert.ToInt32 (Math.Pow(i, 3));
+    result1 = Convert.ToInt32(Math.Pow(num, 3));
+    Console.Write($"{result}, ");
+    i++;
+}
+Console.Write($"{result1}");
