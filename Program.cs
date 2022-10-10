@@ -86,17 +86,42 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-Console.WriteLine("Введите число");
-int num = int.Parse(Console.ReadLine()!);
-int i = 1;
-int result = 0;
-int result1 = 0;
-while(i<=num-1)
+// Console.WriteLine("Введите число");
+// int num = int.Parse(Console.ReadLine()!);
+// int i = 1;
+// int result = 0;
+// int result1 = 0;
+// while(i<=num-1)
 
+// {
+//     result = Convert.ToInt32 (Math.Pow(i, 3));
+//     result1 = Convert.ToInt32(Math.Pow(num, 3));
+//     Console.Write($"{result}, ");
+//     i++;
+// }
+// Console.Write($"{result1}");
+
+
+
+Console.WriteLine("Введите координаты точки А");
+string A = Convert.ToString(Console.ReadLine())!;
+string[] coordinatesA = A.Split(',');
+
+Console.WriteLine("Введите координаты точки B");
+string B = Convert.ToString(Console.ReadLine())!;
+string[] coordinatesB = B.Split(',');
 {
-    result = Convert.ToInt32 (Math.Pow(i, 3));
-    result1 = Convert.ToInt32(Math.Pow(num, 3));
-    Console.Write($"{result}, ");
-    i++;
+
+int x1 = int.Parse(coordinatesA[0]);
+int y1 = int.Parse(coordinatesA[1]);
+int z1 = int.Parse(coordinatesA[2]);
+
+int x2 = int.Parse(coordinatesB[0]);
+int y2 = int.Parse(coordinatesB[1]);
+int z2 = int.Parse(coordinatesB[2]);
+
+double len = Math.Sqrt((Math.Pow(x1-x2, 2))+(Math.Pow(y1-y2, 2))+(Math.Pow(z1-z2, 2)));
+
+Console.WriteLine($"Расстояние между точками { len:f2}");
 }
-Console.Write($"{result1}");
+   
